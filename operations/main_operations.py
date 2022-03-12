@@ -53,8 +53,10 @@ class BiasAdd(ParamOperation):
 
 
 class Sigmoid(Operation):
-
-    def __init__(self):
+    """
+    Sigmoid func for input tensor
+    """
+    def __init__(self) -> None:
 
         super(Sigmoid, self).__init__()
 
@@ -68,4 +70,19 @@ class Sigmoid(Operation):
         input_grad = sigmoid_backward * output_grad
 
         return input_grad
+
+
+class Linear(Operation):
+    
+    def __init__(self) -> None:
+        
+        super(Linear, self).__init__()
+
+    def _output(self) -> ndarray:
+
+        return self.input_
+
+    def _input_grad(self, output_grad: ndarray) -> ndarray:
+
+        return output_grad
 
