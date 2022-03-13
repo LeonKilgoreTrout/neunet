@@ -1,7 +1,6 @@
 import numpy as np
 from numpy import ndarray
-from funcs import assert_same_shape
-from basic_operations import Operation, ParamOperation
+from operations.basic_operations import Operation, ParamOperation
 
 
 class WeightMultiply(ParamOperation):

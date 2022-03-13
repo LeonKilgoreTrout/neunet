@@ -26,7 +26,7 @@ class Layer(object):
 
         raise NotImplementedError
 
-    def forward(self, input_: ndarray) -> ndarray:
+    def forward(self, input_) -> ndarray:
 
         if self.first:
 
@@ -98,4 +98,3 @@ class Dense(Layer):
 
         return
 
-    

@@ -2,10 +2,9 @@ from copy import deepcopy
 from typing import Tuple
 from numpy import ndarray
 import numpy as np
+from funcs import permute_data
 from models.neunet import NeuralNetwork
 from optimizers.optimizers import Optimizer
-from funcs import permute_data
-
 
 
 class Trainer(object):
@@ -24,7 +23,7 @@ class Trainer(object):
     def generate_batches(X: ndarray,
                          y: ndarray,
                          size: int = 32
-                         ):
+                         ) -> Tuple[ndarray]:
 
         assert X.shape[0] == y.shape[0], \
             '''

@@ -46,7 +46,7 @@ class MeanSquaredError(Loss):
     """
     def __init__(self):
 
-        super(MeanSquaredError).__init__()
+        super().__init__()
 
     def _output(self) -> float:
 
